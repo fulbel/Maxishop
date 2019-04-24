@@ -9,6 +9,7 @@ CREATE TABLE item(
   gewicht INTEGER,
   menge INTEGER,
   imgsrc VARCHAR(20),
+  bestellt INTEGER,
   PRIMARY KEY(name)
 )ENGINE=INNODB;
 
