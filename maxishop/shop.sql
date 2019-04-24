@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS shop;
 CREATE DATABASE shop;
 USE shop;
 
-CREATE TABLE items(
+CREATE TABLE item(
   name VARCHAR(20),
   kosten INTEGER,
   beschreibung VARCHAR(100),
