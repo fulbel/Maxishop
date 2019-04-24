@@ -48,6 +48,9 @@ if(isset($_GET["navid"])){
       break;
     case 15:
       include 'registrierung.php';
+      break;
+    case 16:
+      include '../edit.php';
   }
 }else{
   include 'login.php';

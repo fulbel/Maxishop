@@ -4,12 +4,12 @@ USE shop;
 
 CREATE TABLE item(
   name VARCHAR(20),
-  kosten INTEGER,
+  kosten VARCHAR(20),
   beschreibung VARCHAR(100),
-  gewicht INTEGER,
-  menge INTEGER,
+  gewicht VARCHAR(20),
+  menge VARCHAR(20),
   imgsrc VARCHAR(20),
-  bestellt INTEGER,
+  bestellt VARCHAR(20),
   PRIMARY KEY(name)
 )ENGINE=INNODB;
 
@@ -22,5 +22,3 @@ CREATE TABLE user (
   isAdmin BOOLEAN,
   PRIMARY KEY (uname)
 )ENGINE=INNODB;
-
-GRANT ALL ON shop.* TO 'insy3'@'localhost';

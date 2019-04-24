@@ -1,6 +1,9 @@
-    <h1>Shop</h1>
-    <a class="waves-effect waves-light btn-small" href="index.php?navid=9.php">Shop leeren</a>
-
+<h1>Shop</h1>
+    <!--<a class="waves-effect waves-light btn-small" href="index.php?navid=9.php">Shop leeren</a>!-->
+<?php
+//$edititem -> execute(array('1', '1', '1', '1', '1', '1', 'Minecraft'));
+//echo print_r($_POST);
+?>
     <nav>
       <div class="nav-wrapper">
         <form action = "index.php?navid=0" method = "post">
@@ -31,25 +34,21 @@
           <?php
           //$item is der artikel
             if (isset($_POST['search'])) {
-              
+
             }else{
-              if(isset($_SESSION['items'])){
-                foreach($_SESSION['items'] AS $item){
-                  if($item!=null){
-                  echo "<tr><td><img src='../img/".$item['img']."' width='200px' height='200px'</td>";
+                foreach($pdo->query("SELECT name,kosten,beschreibung,gewicht,menge,imgsrc FROM item") AS $item){
+                  echo "<tr><td><img src='../img/".$item['imgsrc']."' width='200px' height='200px'</td>";
                   echo "<td>".$item['name']."</td>";
-                  echo "<td>".$item['descr']."</td>";
-                  echo "<td>".$item['weight']."</td>";
-                  echo "<td>".$item['cost']."</td>";
+                  echo "<td>".$item['beschreibung']."</td>";
+                  echo "<td>".$item['gewicht']."</td>";
+                  echo "<td>".$item['kosten']."</td>";
                   echo "<td><div class='input-field col s5'><select>"
                         ."<option value='' disabled selected>Wähle Anzahl</option>";
-                  for($x=1;$x<=$item['amount'];$x++){
+                  for($x=1;$x<=$item['menge'];$x++){
                     echo "<option value=".$x.">".$x."</option>";
                   }
                   echo "</select></td></tr>";
-                }
               }
-            }
             }
           ?>
 

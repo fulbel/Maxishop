@@ -1,15 +1,12 @@
-
-    <div class="row">
+<div class="row">
   <form class="col s12" method="post" action="index.php?navid=11.php">
     <h1>Artikel bearbeiten</h1>
     <div class="row">
       <?php
         echo "<td><div class='input-field col s2'><select name='edit'>"
               ."<option value='' disabled selected>Wähle Artikel</option>";
-        foreach($_SESSION['items'] AS $item){
-          if($item!=null){
+        foreach($pdo->query("SELECT * FROM item") AS $item){
             echo "<option value=".$item['name'].">".$item['name']."</option>";
-          }
         }
         echo "</select></td></tr>";
       ?>
