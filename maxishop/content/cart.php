@@ -1,22 +1,37 @@
 <div class="row">
   <form class="col s12">
     <h1>Warenkorb</h1>
-
     <table>
       <thead>
         <tr>
-          <th>Bezeichnung</th>
+          <th>Bild</th>
+          <th>Name</th>
           <th>Beschreibung</th>
+          <th>Gewicht</th>
           <th>Kosten</th>
-          <th>Anzahl</th>
+          <th>Bestellte Anzahl</th>
         </tr>
       </thead>
 
       <tbody>
-
-        <tr>
-        </tr>
-
+        <?php
+        if(isset($_POST['select'])){
+        $warenkorb = $_POST['select'];
+          $keys = array_keys($warenkorb);
+          foreach ($keys AS $ware) {
+            foreach ($pdo->query("SELECT name,kosten,beschreibung,gewicht,menge,imgsrc FROM item") AS $item) {
+              if($ware == $item['name']){
+                echo "<tr><td><img src='../img/".$item['imgsrc']."' width='200px' height='200px'</td>";
+                echo "<td>".$item['name']."</td>";
+                echo "<td>".$item['beschreibung']."</td>";
+                echo "<td>".$item['gewicht']."</td>";
+                echo "<td>".$item['kosten']."</td>";
+                echo "<td>".$warenkorb[$ware]."</td>";
+              }
+            }
+          }
+        }
+         ?>
       </tbody>
 
     </table>
