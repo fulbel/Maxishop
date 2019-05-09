@@ -13,6 +13,8 @@ CREATE TABLE item(
   PRIMARY KEY(name)
 )ENGINE=INNODB;
 
+INSERT INTO item VALUES ('apfel','1,50€','Ein Apfel (grün)','0,25 Kilo','10','/img/apfel.jpg','5');
+
 CREATE TABLE user (
   uname VARCHAR(20),
   vname VARCHAR(20),
