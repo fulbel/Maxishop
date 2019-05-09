@@ -4,18 +4,20 @@
 //$edititem -> execute(array('1', '1', '1', '1', '1', '1', 'Minecraft'));
 //echo print_r($_POST);
 ?>
-    <nav>
-      <div class="nav-wrapper">
-        <form action = "index.php?navid=0" method = "post">
-          <div class="input-field">
-            <input id="search" type="search" name="search">
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
-    </nav>
+<a class="waves-effect waves-light btn-small" href="index.php?navid=9.php">Shop leeren</a>
 
+<nav>
+  <div class="nav-wrapper">
+    <form action = "index.php?navid=0" method = "post">
+      <div class="input-field">
+        <input id="search" type="search" name="search">
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
+<form method="post" action="index.php?navid=1">
     <table>
       <thead>
 
@@ -71,4 +73,5 @@
       </tbody>
     </table>
     <button class="btn waves-effect waves-light" type="submit" name="action">BESTELLEN<i class="material-icons right">send</i></button>
+  </form>
 </div>

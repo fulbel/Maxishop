@@ -17,6 +17,7 @@
         <?php
         if(isset($_POST['select'])){
           $warenkorb = $pdo->query("SELECT name,kosten,beschreibung,gewicht,menge,imgsrc FROM item");
+          $keys = array_keys($warenkorb);
           foreach ($warenkorb AS $item) {
             if($item['bestellt'] > 0){
                echo "<tr><td><img src='../img/".$item['imgsrc']."' width='200px' height='200px'</td>";
@@ -24,7 +25,7 @@
                echo "<td>".$item['beschreibung']."</td>";
                echo "<td>".$item['gewicht']."</td>";
                echo "<td>".$item['kosten']."</td>";
-               echo "<td>".$item['bestellt']."</td>";
+               echo "<td>".$warenkorb[$ware]."</td>";
             }
           }
         }
