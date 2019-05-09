@@ -44,7 +44,7 @@
                   echo "<td>".$item['beschreibung']."</td>";
                   echo "<td>".$item['gewicht']."</td>";
                   echo "<td>".$item['kosten']."</td>";
-                  echo "<td><div class='input-field col s5'><select name='select'>"
+                  echo "<td><div class='input-field col s5'><select name='select[]'>"
                         ."<option value='' disabled selected>Wähle Anzahl</option>";
                   for($x=1;$x<=$item['menge'];$x++){
                     echo "<option value=".$x.">".$x."</option>";
@@ -59,7 +59,7 @@
                   echo "<td>".$item['beschreibung']."</td>";
                   echo "<td>".$item['gewicht']."</td>";
                   echo "<td>".$item['kosten']."</td>";
-                  echo "<td><div class='input-field col s5'><select>"
+                  echo "<td><div class='input-field col s5'><select name='select[$item[name]]'>"
                         ."<option value='' disabled selected>Wähle Anzahl</option>";
                   for($x=1;$x<=$item['menge'];$x++){
                     echo "<option value=".$x.">".$x."</option>";

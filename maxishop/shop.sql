@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS shop;
+﻿DROP DATABASE IF EXISTS shop;
 CREATE DATABASE shop;
 USE shop;
 
@@ -24,3 +24,5 @@ CREATE TABLE user (
   isAdmin BOOLEAN,
   PRIMARY KEY (uname)
 )ENGINE=INNODB;
+
+INSERT INTO user VALUES ('user1','Manuel','Stocker','mstocker...','pw','true');
