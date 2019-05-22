@@ -15,5 +15,4 @@ $editimgsrc = $pdo -> prepare("UPDATE item imgsrc=? WHERE name=?");
 
 
 
-$additem -> execute(array('Minecraft', 1, 'Ein lustiges Spielchen', 1, 1, '../img/minecraft.jpg'));
 ?>

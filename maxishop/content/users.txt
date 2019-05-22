@@ -1,1 +1,4 @@
 3ahit@class.tgm.ac.at;df5ea29924d39c3be8785734f13169c6;3AHIT;3A;HIT;nie
+mstock@sut.at;df5ea29924d39c3be8785734f13169c6;mstock;m;stock;May 13, 2019
+mscholz@student.tgm.ac.at;912ec803b2ce49e4a541068d495ab570;mscholz;Michael;Scholz;May 13, 2019
+rfoster;8fe4c11451281c094a6578e6ddbf5eed;user;rfoster;rfoster;13.11.2001

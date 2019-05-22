@@ -1,7 +1,7 @@
   <!DOCTYPE html>
   <html>
     <head>
-    <title>ArrayShop</title>
+    <title>SetShop</title>
     <!-- Compiled and minified CSS -->
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-      <nav>
+      <nav class="teal">
         <ul id="dropdown1" class="dropdown-content">
           <li><a href="index.php?navid=0">Shop</a></li>
           <li class="divider"></li>
@@ -39,7 +39,7 @@
           <li><a href="index.php?navid=7">Artikel entfernen</a></li>
         </ul>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Willkommen im ArrayShop<?php
+          <a href="#" class="brand-logo center">Willkommen im SortedSetShop<?php
           if(isset($_SESSION['a_user'])){
             echo ", " . $_SESSION['a_user'];
             $ausgabe = '<a href="index.php?navid=13">Abmelden</a>';

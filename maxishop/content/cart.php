@@ -1,6 +1,6 @@
 <div class="row">
   <form class="col s12">
-    <h1>Warenkorb</h1>
+    <center><h1>Warenkorb</h1></center>
     <table>
       <thead>
         <tr>

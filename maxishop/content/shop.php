@@ -1,4 +1,4 @@
-<h1>Shop</h1>
+<center><h1>Shop</h1></center>
     <!--<a class="waves-effect waves-light btn-small" href="index.php?navid=9.php">Shop leeren</a>!-->
 <?php
 //$edititem -> execute(array('1', '1', '1', '1', '1', '1', 'Minecraft'));
@@ -6,7 +6,7 @@
 ?>
 <a class="waves-effect waves-light btn-small" href="index.php?navid=9.php">Shop leeren</a>
 
-<nav>
+<nav class="teal">
   <div class="nav-wrapper">
     <form action = "index.php?navid=0" method = "post">
       <div class="input-field">
